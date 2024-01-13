@@ -57,7 +57,9 @@ import { firebaseApp,firestore} from "./firebase/config";
 //         console.log('hiiii')
 //         firebaseApp.firestore().collection('products').doc('oE6ILWsygPPUluqbgiEB').delete().then(()=>{
 //           console.log('DATA DELETED')
-//         })
+//         }).catch((error) => {
+//           console.error("Error removing document: ", error);
+//       });
 //       }}>click here</button>
 //     </div>
 //   );
@@ -73,7 +75,7 @@ function App() {
       <button onClick={()=>{
         console.log('hiiii')
         firebaseApp.firestore().collection('products').doc('oE6ILWsygPPUluqbgiEB').set({
-          name:'google pixel 4a'
+          name:'google PIXAL'
         }).then(()=>{
           console.log('updated')
         })
