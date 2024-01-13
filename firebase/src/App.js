@@ -1,14 +1,27 @@
 import { firebaseApp,firestore} from "./firebase/config";
+// import { doc } from "./firebase/config";
+// import { collection, getDocs } from "firebase/firestore";
+
+
+// async function fetchDataFromFirebase(){
+//   const querysnapshot=await getDocs(collection(db,'products'))
+//   const data=[]
+//   querysnapshot.forEach((doc)=>{
+//     data.pushs({id:doc.id,...doc.data()})
+//   })
+//   return data
+// }
+
 
 
 function App() {
   return (
     <div className="App">
-      <h1>hello world</h1>
+      <h1>Fetch data from firebase firestore DB</h1>
       <button onClick={()=>{
         firebaseApp.firestore().collection('products').get().then(snapshot => {
           snapshot.forEach((obj) => {
-              console.log(obj.data())
+              console.log(obj.data(),obj.id)
             })
         })
 
