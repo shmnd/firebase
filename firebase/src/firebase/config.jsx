@@ -1,7 +1,5 @@
 import firebase from "firebase/compat/app";
 import "firebase/compat/firestore";
-// import { initializeApp } from "firebase/app";
-// import { getFirestore } from "firebase/firestore";
 
 
 
@@ -21,7 +19,3 @@ const firestore = firebase.firestore();
 
 export{firebaseApp,firestore}
 
-// const app = initializeApp(firebaseConfig)
-// const doc =getFirestore(app)
-
-// export { doc}
