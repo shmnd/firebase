@@ -1,4 +1,4 @@
-import { firebaseApp } from "./firebase/config";
+import { firebaseApp,firestore} from "./firebase/config";
 
 
 function App() {
@@ -6,8 +6,8 @@ function App() {
     <div className="App">
       <h1>hello world</h1>
       <button onClick={()=>{
-        firebaseApp.firestore().collection('products').get().then(snapshot=>{
-            snapshot.forEach((obj)=>{
+        firebaseApp.firestore().collection('products').get().then(snapshot => {
+          snapshot.forEach((obj) => {
               console.log(obj.data())
             })
         })
