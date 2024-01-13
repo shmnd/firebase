@@ -19,9 +19,10 @@ function App() {
     <div className="App">
       <h1>Fetch data from firebase firestore DB</h1>
       <button onClick={()=>{
-        firebaseApp.firestore().collection('products').get().then(snapshot => {
+        console.log('hiiii')
+        firebaseApp.firestore().collection('products ').get().then(snapshot => {
           snapshot.forEach((obj) => {
-              console.log(obj.data(),obj.id)
+              console.log(obj.data())
             })
         })
 
