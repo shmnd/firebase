@@ -49,14 +49,33 @@ import { firebaseApp,firestore} from "./firebase/config";
 
 
 // DELETING DATA USING ID FROM FIREBASE
+// function App() {
+//   return (
+//     <div className="App">
+//       <h1>Fetch data from firebase firestore DB</h1>
+//       <button onClick={()=>{
+//         console.log('hiiii')
+//         firebaseApp.firestore().collection('products').doc('oE6ILWsygPPUluqbgiEB').delete().then(()=>{
+//           console.log('DATA DELETED')
+//         })
+//       }}>click here</button>
+//     </div>
+//   );
+// }
+
+// export default App;
+
+//  UPDATION USING FRONTEND
 function App() {
   return (
     <div className="App">
       <h1>Fetch data from firebase firestore DB</h1>
       <button onClick={()=>{
         console.log('hiiii')
-        firebaseApp.firestore().collection('products').doc('oE6ILWsygPPUluqbgiEB').delete().then(()=>{
-          console.log('DATA DELETED')
+        firebaseApp.firestore().collection('products').doc('oE6ILWsygPPUluqbgiEB').set({
+          name:'google pixel 4a'
+        }).then(()=>{
+          console.log('updated')
         })
       }}>click here</button>
     </div>
